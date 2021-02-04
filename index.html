@@ -8,17 +8,30 @@
     <title>Survey</title>
 </head>
 <body>
-    <div class="main">
-    <css-doodle click-to-update>
-/* 10 PRINT */
-
-@grid: 50 / 1000px;
-
-@size: 1px calc(141.4% + 1px);
-transform: rotate(@p(±45deg));
-background: #AEACFB;
-margin: auto;
-    </css-doodle>
-    </div>
+  <div class="container">
+		<h1 id="title">Survey Form</h1>
+		<p id="description">Please, help us improve our services by filling out this survey.</p>
+		<p id="description">Thank you for your time!</p>
+		<form action="" id="survey-form">
+			<div class="form-items">
+				<label id="name-label" for="name" class="form-items"><strong>Name</strong></label>
+				<input id="name" type="text" placeholder="Enter your name" class="form-items" required></div>
+			<div class="form-items">
+				<label id="email-label" for="email" class="form-items"><strong>E-mail</strong></label>
+				<input id="email" type="email" placeholder="Enter your e-mail" class="form-items" required>
+			</div>
+			<div class="form-items">
+				<p><strong>Which option best describes your current role?</strong></p>
+				<select id="dropdown" name="role" class="form-items">
+					<option disabled selected value>Select your current role</option>
+					<option value="student">Student</option>
+					<option value="postdoc">Postdoc</option>
+					<option value="industry researcher">Industry researcher</option>
+					<option value="researcher">Researcher</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+		</form>
+  </div>
 </body>
 </html>
