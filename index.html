@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles.css">
-    <script src="https://unpkg.com/css-doodle@0.14.2/css-doodle.min.js"></script>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <title>Survey</title>
 </head>
 <body>
   <div class="container">
-		<h1 id="title">Survey Form</h1>
+		<h1 id="title">Docking Server Survey Form</h1>
 		<p id="description">Please, help us improve our services by filling out this survey.</p>
 		<p id="description">Thank you for your time!</p>
 		<form action="" id="survey-form">
@@ -30,10 +30,48 @@
 					<option value="researcher">Researcher</option>
 					<option value="other">Other</option>
 				</select>
-				<div class="form-items">
-					<label id="number-label" for="rate" class="form-items"><strong>Rate our docking server, from 0 to 10</strong></label>
-					<input id="number" type="number" min="0" max="10" placeholder="Rating, from 0 to 10" class="form-items" required>
-				</div>
+			</div>
+			<div class="form-items">
+				<p><strong>What is your area of research?</strong></p>
+				<label for="biochemistry"><input value="biochemistry" type="checkbox" class="area-research" name="area-research">Biochemistry, biophysics and structural biology</label>
+				<br />
+				<label for="cancer"><input value="cancer" type="checkbox" class="area-research" name="area-research">Cancer</label>
+				<label for="cell"><input value="cell" type="checkbox" class="area-research" name="area-research">Cell biology</label>
+				<label for="computational"><input value="computational" type="checkbox" class="area-research" name="area-research">Computational biology</label>
+				<br />
+				<label for="genetics"><input value="genetics" type="checkbox" class="area-research" name="area-research">Genetics</label>
+				<label for="immuno"><input value="immuno" type="checkbox" class="area-research" name="area-research">Immunology</label>
+				<label for="infectious"><input value="infectious" type="checkbox" class="area-research" name="area-research">Infectious disease</label>
+				<br />
+				<label for="microbiology"><input value="microbiology" type="checkbox" class="area-research" name="area-research">Microbiology</label>
+				<label for="neuro"><input value="neuro" type="checkbox" class="area-research" name="area-research">Neurobiology</label>
+				<label for="plant"><input value="plant" type="checkbox" class="area-research" name="area-research">Plant biology</label>
+				<br />
+				<label for="other"><input value="other" type="checkbox" class="area-research" name="area-research">Other</label>
+				<textarea name="area-research" id="other-descript"></textarea>
+			</div>
+			<div class="form-items">
+				<label id="number-label" for="rate" class="form-items"><strong>Rate our docking server, from 0 to 10</strong></label>
+				<input id="number" type="number" min="0" max="10" placeholder="Rating, from 0 to 10" class="form-items" required>
+			</div>
+			<div class="form-items">
+				<p><strong>Would you recommend our server to others?</strong></p>
+				<label>
+					<input id="recommendation" type="radio" name="recommendation" value="Yes">Yes
+				</label>
+				<label>
+					<input id="recommendation" type="radio" name="recommendation" value="No">No
+				</label>
+				<label>
+					<input id="recommendation" type="radio" name="recommendation" value="Unsure">Not sure
+				</label>
+			</div>
+			<div class="form-items">
+				<p><strong>Any comments or suggestions?</strong></p>
+				<textarea name="comments" id="comments" placeholder="Enter your comments here"></textarea>
+			</div>
+			<div class="form-items">
+				<button type="submit" id="submit">Submit</button>
 			</div>
 		</form>
   </div>
